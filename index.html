@@ -1,0 +1,49 @@
+---
+layout: home
+title: Home
+---
+
+<section class="masthead" aria-labelledby="intro-title">
+  <div class="masthead-content">
+    <div class="avatar-placeholder" aria-hidden="true">YN</div>
+    <h1 id="intro-title">{{ site.author.name }}</h1>
+    <div class="divider divider-light"><span aria-hidden="true">★</span></div>
+    <p class="masthead-subtitle">{{ site.author.role }} · {{ site.author.location }}</p>
+  </div>
+</section>
+
+<section class="section portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
+  <div class="container">
+    <h2 id="portfolio-title" class="section-title">Portfolio</h2>
+    <div class="divider"><span aria-hidden="true">★</span></div>
+    <p class="section-intro">A selection of work, experiments, and ideas. Replace these placeholders with the projects you are proud to share.</p>
+    <div class="project-grid">
+      {% assign featured_projects = site.data.projects | where: "featured", true %}
+      {% for project in featured_projects %}
+        {% include project-card.html project=project %}
+      {% endfor %}
+    </div>
+    <div class="center-action"><a class="button" href="{{ '/projects/' | relative_url }}">View all projects</a></div>
+  </div>
+</section>
+
+<section class="section about-section" id="about" aria-labelledby="about-title">
+  <div class="container narrow">
+    <h2 id="about-title" class="section-title light-title">About</h2>
+    <div class="divider divider-light"><span aria-hidden="true">★</span></div>
+    <div class="about-columns">
+      <p>Hi! I’m {{ site.author.name }}, a {{ site.author.role | downcase }} who enjoys making useful, accessible digital experiences.</p>
+      <p>This is placeholder copy for your introduction. Share your background, the problems you like solving, and what you are looking for next.</p>
+    </div>
+    <a class="button button-outline" href="{{ '/about/' | relative_url }}">Read more about me</a>
+  </div>
+</section>
+
+<section class="section contact-section" id="contact" aria-labelledby="contact-title">
+  <div class="container narrow">
+    <h2 id="contact-title" class="section-title">Contact me</h2>
+    <div class="divider"><span aria-hidden="true">★</span></div>
+    <p class="section-intro">Have a question, an idea, or an opportunity? Send a message and I’ll get back to you.</p>
+    <a class="button" href="mailto:{{ site.author.email }}">Email {{ site.author.name }}</a>
+  </div>
+</section>
