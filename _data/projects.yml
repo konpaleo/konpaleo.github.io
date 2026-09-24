@@ -1,0 +1,26 @@
+- name: "Project One"
+  description: "Replace this with a short explanation of what the project does, why you built it, and what you learned."
+  image: "/assets/images/project-placeholder.svg"
+  tags:
+    - "Placeholder"
+    - "Web"
+  url: "#"
+  featured: true
+
+- name: "Project Two"
+  description: "Add another project here. Keep the description focused on the problem, your approach, and the outcome."
+  image: "/assets/images/project-placeholder.svg"
+  tags:
+    - "Experiment"
+    - "Design"
+  url: "#"
+  featured: true
+
+- name: "Project Three"
+  description: "Use this card for a smaller project, an open-source contribution, a paper, or an experiment."
+  image: "/assets/images/project-placeholder.svg"
+  tags:
+    - "Research"
+    - "Code"
+  url: "#"
+  featured: true

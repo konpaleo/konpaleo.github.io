@@ -1,39 +1,23 @@
-title: Your Name
-description: Personal portfolio and projects
+title: "Your Name"
+description: "A personal portfolio of projects, experiments, and ideas."
 url: "https://konpaleo.github.io"
-baseurl: "" # leave empty for user/organization site, use "/repo-name" for project site
+baseurl: ""
 
-# Build settings
+repository: "konpaleo/konpaleo.github.io"
+author:
+  name: "Your Name"
+  email: "your-email@example.com"
+
 markdown: kramdown
-theme: minima # you can change this later
+permalink: pretty
+timezone: Europe/Athens
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Your original settings
-lsi: false
-safe: true
-incremental: false
-highlighter: rouge
-
-gist:
-  noscript: false
-
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
-
-# Navigation (optional)
-header_pages:
-  - index.md
-  - projects.md
-  - about.md
-
-# Author info (optional but useful for SEO)
-author:
-  name: Your Name
-  email: your-email@example.com
-
-# Social links (optional)
-github_username: your-username
-linkedin_username: your-linkedin
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
