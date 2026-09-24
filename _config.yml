@@ -1,5 +1,5 @@
-title: "Your Name"
-description: "A personal portfolio of projects, experiments, and ideas."
+title: "Your Name | Portfolio"
+description: "A portfolio of projects, experiments, and ideas by Your Name."
 url: "https://konpaleo.github.io"
 baseurl: ""
 
@@ -7,6 +7,8 @@ repository: "konpaleo/konpaleo.github.io"
 author:
   name: "Your Name"
   email: "your-email@example.com"
+  location: "City, Country"
+  role: "Designer & Developer"
 
 markdown: kramdown
 permalink: pretty

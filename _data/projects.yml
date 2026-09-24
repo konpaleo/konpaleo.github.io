@@ -1,5 +1,5 @@
 - name: "Project One"
-  description: "Replace this with a short explanation of what the project does, why you built it, and what you learned."
+  description: "Placeholder description for a web project. Explain the problem, your role, the tools you used, and the outcome."
   image: "/assets/images/project-placeholder.svg"
   tags:
     - "Placeholder"
@@ -8,7 +8,7 @@
   featured: true
 
 - name: "Project Two"
-  description: "Add another project here. Keep the description focused on the problem, your approach, and the outcome."
+  description: "Placeholder description for a design or product project. Replace this text with a concise case-study summary."
   image: "/assets/images/project-placeholder.svg"
   tags:
     - "Experiment"
@@ -17,7 +17,7 @@
   featured: true
 
 - name: "Project Three"
-  description: "Use this card for a smaller project, an open-source contribution, a paper, or an experiment."
+  description: "Placeholder description for an experiment, open-source contribution, or research project you want to highlight."
   image: "/assets/images/project-placeholder.svg"
   tags:
     - "Research"

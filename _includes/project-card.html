@@ -1,6 +1,6 @@
 <article class="project-card">
   <a class="project-image" href="{{ include.project.url }}" {% if include.project.url == '#' %}aria-label="{{ include.project.name }} placeholder link"{% endif %}>
-    <img src="{{ include.project.image | relative_url }}" alt="">
+    <img src="{{ include.project.image | relative_url }}" alt="{{ include.project.name }} preview">
   </a>
   <div class="project-card-body">
     <div class="tag-list">
