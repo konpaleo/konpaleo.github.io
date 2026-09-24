@@ -1,0 +1,23 @@
+title: "Your Name"
+description: "A personal portfolio of projects, experiments, and ideas."
+url: "https://konpaleo.github.io"
+baseurl: ""
+
+repository: "konpaleo/konpaleo.github.io"
+author:
+  name: "Your Name"
+  email: "your-email@example.com"
+
+markdown: kramdown
+permalink: pretty
+timezone: Europe/Athens
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
