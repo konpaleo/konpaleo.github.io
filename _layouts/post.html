@@ -1,0 +1,39 @@
+---
+layout: page
+---
+
+<section id="project" class="project-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <article>
+          <img src="{{ '/img/portfolio/' | append: page.img | relative_url }}" class="img-responsive img-centered" alt="{{ page.alt }}">
+          {% if page.description %}
+          <hr class="star-primary">
+          <p>{{ page.description }}</p>
+          {% endif %}
+          {% if content != "" %}
+          {{ content }}
+          {% endif %}
+          <ul class="list-inline item-details">
+            {% if page.client %}
+            <li>Client:
+              <strong>{{ page.client }}</strong>
+            </li>
+            {% endif %}
+            {% if page.project-date %}
+            <li>Date:
+              <strong>{{ page.project-date }}</strong>
+            </li>
+            {% endif %}
+            {% if page.category %}
+            <li>Service:
+              <strong>{{ page.category }}</strong>
+            </li>
+            {% endif %}
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
