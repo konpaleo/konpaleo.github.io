@@ -2,9 +2,9 @@
 title: Konstantinos Palaiologos
 email: konpaleo@hotmail.com
 url: https://konpaleo.github.io
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+description: "I am a Software and AI Engineer specializing in data and LLM applications, with a background in Physics and a Master’s in Machine Learning and Data Science. I have two years of professional experience designing and deploying AI-driven solutions across fields such as maritime resilience, disaster impact quantification and online reputation management. My current focus is on building applications that use AI to support human work and research, rather than replace it."
 keywords: "your keywords, separated by commas"
-skills: "Software & AI Engineer"
+skills: "Software Engineer | Data Science | AI Solutions"
 meta_author: Palaiologos Konstantinos
 
 # Google webmaster tools
@@ -39,16 +39,10 @@ footer:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
   - title: github
-    url: http://github.com/jekyll
+    url: https://github.com/konpaleo
+  - title: linkedin
+    url: https://www.linkedin.com/in/konstantinos-palaiologos-97dkk/
 
 # Postal address (add as many lines as necessary)
 address:
