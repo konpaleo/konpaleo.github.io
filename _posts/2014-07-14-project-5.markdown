@@ -3,7 +3,7 @@ layout: post
 title: Project Five
 permalink: /projects/project-five/
 date: 2014-07-14
-img: capstone.png
+img: fisheries.png
 alt: image-alt
 project-date: April 2014
 client: Start Bootstrap
