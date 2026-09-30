@@ -4,36 +4,80 @@ layout: page
 
 <section id="project" class="project-page">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
-        <article>
-          <img src="{{ '/img/portfolio/' | append: page.img | relative_url }}" class="img-responsive img-centered" alt="{{ page.alt }}">
-          {% if page.description %}
-          <hr class="star-primary">
-          <p>{{ page.description }}</p>
-          {% endif %}
-          {% if content != "" %}
-          {{ content }}
-          {% endif %}
-          <ul class="list-inline item-details">
-            {% if page.client %}
-            <li>Client:
-              <strong>{{ page.client }}</strong>
-            </li>
-            {% endif %}
-            {% if page.project-date %}
-            <li>Date:
-              <strong>{{ page.project-date }}</strong>
-            </li>
-            {% endif %}
-            {% if page.category %}
-            <li>Service:
-              <strong>{{ page.category }}</strong>
-            </li>
-            {% endif %}
-          </ul>
-        </article>
+    <article class="project-article">
+      {% if page.img %}
+      <img src="{{ '/img/projects/' | append: page.img | relative_url }}" class="img-responsive project-hero-image" alt="{{ page.alt | default: page.title }}">
+      {% endif %}
+
+      <div class="project-description">
+        {% if page.description %}
+        <div class="project-summary">{{ page.description | markdownify }}</div>
+        {% endif %}
+        {% if content != "" %}
+        <div class="project-content">{{ content }}</div>
+        {% endif %}
       </div>
-    </div>
+
+      {% if page.gallery %}
+      <section class="project-gallery" aria-label="Project screenshots and figures">
+        {% if page.gallery_title %}
+        <h2>{{ page.gallery_title }}</h2>
+        {% endif %}
+        <div class="project-gallery-grid">
+          {% for item in page.gallery %}
+          <figure class="project-gallery-item">
+            <button
+              class="project-gallery-trigger"
+              type="button"
+              data-toggle="modal"
+              data-target="#project-image-modal"
+              data-image="{{ item.image | relative_url | escape }}"
+              data-alt="{{ item.alt | default: page.title | escape }}"
+              {% if item.caption %}data-caption="{{ item.caption | escape }}"{% endif %}
+              aria-label="Open image preview: {{ item.alt | default: page.title | escape }}">
+              <img src="{{ item.image | relative_url }}" alt="">
+            </button>
+            {% if item.caption %}
+            <figcaption>{{ item.caption }}</figcaption>
+            {% endif %}
+          </figure>
+          {% endfor %}
+        </div>
+      </section>
+
+      <div class="modal fade project-image-modal" id="project-image-modal" tabindex="-1" role="dialog" aria-label="Image preview" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close image preview">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img class="project-image-preview" src="" alt="">
+              <p class="project-image-preview-caption" hidden></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.tags %}
+      <ul class="project-tags">
+        {% for project_tag in page.tags %}
+        <li>{{ project_tag | strip | escape }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.repository %}
+      <div class="project-actions">
+        <a class="project-repository-button" href="{{ page.repository }}" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          <span>View Repository</span>
+        </a>
+      </div>
+      {% endif %}
+    </article>
   </div>
 </section>

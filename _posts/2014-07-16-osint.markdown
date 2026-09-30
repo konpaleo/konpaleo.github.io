@@ -1,0 +1,18 @@
+---
+layout: post
+title: Project Three
+permalink: /projects/osint/
+date: 2014-07-16
+img: osint.png
+project-date: April 2014
+client: Start Bootstrap
+category: Web Development
+description: A tool that leverages publicly available social media data for generating alerts and data analytics about forced population displacement.
+tags:
+    - Data Collection
+    - Data Anonymization
+    - LLM
+    - Topic Modeling
+    - Sentiment Analysis
+
+---
