@@ -1,18 +1,19 @@
 ---
 layout: post
-title: Project Three
+title: OSINT Displacement Analytics
 permalink: /projects/osint/
 date: 2014-07-16
 img: osint.png
 project-date: April 2014
-client: Start Bootstrap
-category: Web Development
+category: OSINT & Displacement Analytics
 description: A tool that leverages publicly available social media data for generating alerts and data analytics about forced population displacement.
+challenge: Deriving useful displacement insights from public social media requires extracting meaningful signals while protecting the privacy of people represented in the data.
+methodology: The tool collects and anonymizes public data, then applies topic modeling and sentiment analysis to support analytics and alert generation.
 tags:
     - Data Collection
     - Data Anonymization
     - LLM
     - Topic Modeling
     - Sentiment Analysis
-
+technologies: []
 ---

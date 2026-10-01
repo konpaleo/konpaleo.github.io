@@ -9,14 +9,75 @@ layout: page
       <img src="{{ '/img/projects/' | append: page.img | relative_url }}?v=1" class="img-centered project-hero-image" alt="{{ page.alt | default: page.title }}">
       {% endif %}
 
-      <div class="project-description">
-        {% if page.description %}
-        <div class="project-summary">{{ page.description | markdownify }}</div>
+      <header class="project-header">
+        <h1>{{ page.title | escape }}</h1>
+      </header>
+
+      {% if page.project-date or page.client or page.category %}
+      <ul class="project-metadata" aria-label="Project details">
+        {% if page.project-date %}
+        <li>
+          <span class="project-metadata-label">Date</span>
+          <span class="project-metadata-value">{{ page.project-date | escape }}</span>
+        </li>
         {% endif %}
-        {% if content != "" %}
-        <div class="project-content">{{ content }}</div>
+        {% if page.client %}
+        <li>
+          <span class="project-metadata-label">Client</span>
+          <span class="project-metadata-value">{{ page.client | escape }}</span>
+        </li>
+        {% endif %}
+        {% if page.category %}
+        <li>
+          <span class="project-metadata-label">Category</span>
+          <span class="project-metadata-value">{{ page.category | escape }}</span>
+        </li>
+        {% endif %}
+      </ul>
+      {% endif %}
+
+      <div class="project-sections">
+        {% if page.description %}
+        <section class="project-section">
+          <h2>Overview</h2>
+          <div class="project-section-copy">{{ page.description | markdownify }}</div>
+        </section>
+        {% endif %}
+        {% if page.challenge %}
+        <section class="project-section">
+          <h2>Challenge</h2>
+          <div class="project-section-copy">{{ page.challenge | markdownify }}</div>
+        </section>
+        {% endif %}
+        {% if page.methodology %}
+        <section class="project-section">
+          <h2>Methodology</h2>
+          <div class="project-section-copy">{{ page.methodology | markdownify }}</div>
+        </section>
         {% endif %}
       </div>
+
+      {% if page.tags and page.tags != empty %}
+      <section class="project-taxonomy" aria-labelledby="project-keywords-heading">
+        <h2 id="project-keywords-heading">Keywords</h2>
+        <ul class="project-tags">
+          {% for project_tag in page.tags %}
+          <li>{{ project_tag | strip | escape }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if page.technologies and page.technologies != empty %}
+      <section class="project-taxonomy" aria-labelledby="project-technologies-heading">
+        <h2 id="project-technologies-heading">Technologies</h2>
+        <ul class="project-tags">
+          {% for technology in page.technologies %}
+          <li>{{ technology | strip | escape }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
 
       {% if page.gallery %}
       <section class="project-gallery" aria-label="Project screenshots and figures">
@@ -60,14 +121,6 @@ layout: page
           </div>
         </div>
       </div>
-      {% endif %}
-
-      {% if page.tags %}
-      <ul class="project-tags">
-        {% for project_tag in page.tags %}
-        <li>{{ project_tag | strip | escape }}</li>
-        {% endfor %}
-      </ul>
       {% endif %}
 
       {% if page.repository %}
