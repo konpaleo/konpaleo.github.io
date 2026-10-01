@@ -19,4 +19,9 @@ tags:
   - LLM
   - Vector Databases
   - Prompt Engineering
+  - API Integration
+technologies:
+  - FastAPI
+  - Elasticsearch
+  - Jina
 ---

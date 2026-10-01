@@ -6,7 +6,7 @@ layout: page
   <div class="container">
     <article class="project-article">
       {% if page.img %}
-      <img src="{{ '/img/projects/' | append: page.img | relative_url }}" class="img-responsive project-hero-image" alt="{{ page.alt | default: page.title }}">
+      <img src="{{ '/img/projects/' | append: page.img | relative_url }}?v=1" class="img-centered project-hero-image" alt="{{ page.alt | default: page.title }}">
       {% endif %}
 
       <div class="project-description">

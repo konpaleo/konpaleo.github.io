@@ -205,12 +205,18 @@ section.success {
     margin: 0 auto;
 }
 
-.project-hero-image {
+.project-page .project-hero-image {
+    display: block;
     width: 60%;
+    max-width: 100%;
     height: auto;
-    margin: 0 auto 3rem;
-    border: 1px solid rgba(44, 62, 80, .1);
-    border-radius: .75rem;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none;
+    background: transparent;
 }
 
 .project-description {
