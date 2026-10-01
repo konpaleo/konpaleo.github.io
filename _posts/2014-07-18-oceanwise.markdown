@@ -11,8 +11,7 @@ gallery:
     caption: OceanWise screenshot 2
 alt: image-alt
 project-date: April 2014
-client: Start Bootstrap
-category: Web Development
+category: Maritime Crisis Management
 description: Oceanwise is an AI-powered chatbot developed within the Oceanids project to support port authorities with crisis management and decision-making. It combines structured data and external LLMs to provide stakeholders with fast, conversational access to relevant information. Built with FastAPI, Celery, and Elasticsearch, the platform integrates multiple services through a scalable backend architecture.
 tags:
   - RAG
@@ -24,4 +23,6 @@ technologies:
   - FastAPI
   - Elasticsearch
   - Jina
+challenge: Port authorities need fast access to relevant information when managing crises, but that information is distributed across structured data and external services.
+methodology: Oceanwise combines structured data with external LLMs behind a conversational assistant. FastAPI, Celery, and Elasticsearch connect the services in a scalable backend.
 ---
