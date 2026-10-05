@@ -18,11 +18,11 @@
         <li class="hidden">
           <a href="#page-top"></a>
         </li>
-        <li class="page-scroll">
+        <li class="{% if page.url == '/' %}page-scroll{% endif %}">
           <a href="{% if page.url == '/' %}#projects{% else %}{{ '/' | relative_url }}#projects{% endif %}">Projects</a>
         </li>
-        <li class="page-scroll">
-          <a href="#contact">Contact</a>
+        <li>
+          <a href="{{ '/contact/' | relative_url }}">Contact</a>
         </li>
       </ul>
     </div>

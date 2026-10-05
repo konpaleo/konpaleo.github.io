@@ -11,7 +11,7 @@
       {% for post in site.posts %}
       <div class="portfolio-flex-item portfolio-item">
         <a href="{{ post.url | relative_url }}" class="portfolio-link">
-          <img src="{{ '/img/projects/' | append: post.img | relative_url }}" class="img-responsive" alt="{{ post.alt }}">
+          <img src="{{ '/img/projects/' | append: post.img | relative_url }}?v=1" class="img-responsive" alt="{{ post.alt }}">
         </a>
       </div>
       {% endfor %}

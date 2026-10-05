@@ -104,12 +104,12 @@ header .intro-text .skills {
 }
 
 header .intro-text .description {
-    max-width: 950px;
+    max-width: 80%;
     margin: 1.5em auto 0;
     font-size: 1.2em;
     font-weight: 300;
     line-height: 1.6;
-    text-align: justify;
+    text-align: center;
 }
 
 header .intro-text + .list-inline {
@@ -137,25 +137,25 @@ header .intro-text + .list-inline {
 
 @media(min-width:768px) {
     .navbar-fixed-top {
-        padding: 25px 0;
+        padding: 20px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
     }
 
     .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
+        font-size: 2rem;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
     }
 
     .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
+        padding: 5px 0;
     }
 
     .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
+        font-size: 1.6rem;
     }
 }
 
@@ -171,6 +171,7 @@ header .intro-text + .list-inline {
 
 .navbar .navbar-nav {
     letter-spacing: 1px;
+    font-size: 1.5rem;
 }
 
 .navbar .navbar-nav li a:focus {
@@ -196,49 +197,315 @@ section.success {
     background: #{{ site.color.primary }};
 }
 
+.contact-layout {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.contact-layout main {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.contact-layout footer {
+    margin-top: auto;
+}
+
+.contact-page {
+    display: flex;
+    width: 100%;
+    flex: 1 0 auto;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 115px 0 55px;
+}
+
+.contact-page .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-page h1 {
+    margin: 0;
+    color: #{{ site.color.secondary }};
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1.15;
+}
+
+.contact-intro {
+    max-width: 680px;
+    margin: 1.25rem auto 2rem;
+    color: #{{ site.color.secondary }};
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contact-card {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    align-items: center;
+    gap: .85rem;
+    min-height: 96px;
+    padding: 1rem 1.15rem;
+    border: 1px solid rgba(44, 62, 80, .1);
+    border-radius: 1rem;
+    color: #{{ site.color.secondary }};
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(35, 49, 64, .06);
+    text-decoration: none;
+    text-align: left;
+    transition: border-color .2s ease, box-shadow .2s ease, color .2s ease, transform .2s ease;
+}
+
+.contact-card:hover,
+.contact-card:focus {
+    border-color: #{{ site.color.primary }};
+    color: #{{ site.color.primary }};
+    box-shadow: 0 10px 24px rgba(35, 49, 64, .1);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.contact-card-icon,
+.contact-card-action {
+    transition: color .2s ease, background-color .2s ease;
+}
+
+.contact-card:hover .contact-card-icon,
+.contact-card:focus .contact-card-icon {
+    color: #fff;
+    background: #{{ site.color.primary }};
+}
+
+.contact-card:hover .contact-card-action,
+.contact-card:focus .contact-card-action {
+    color: #{{ site.color.primary }};
+}
+
+.contact-card:focus-visible {
+    outline: 3px solid #{{ site.color.primary }};
+    outline-offset: 4px;
+}
+
+.contact-email-card {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.contact-card-icon {
+    display: grid;
+    flex: 0 0 56px;
+    width: 56px;
+    height: 56px;
+    place-items: center;
+    border-radius: .9rem;
+    color: #{{ site.color.primary }};
+    background: rgba(82, 169, 152, .12);
+    font-size: 1.6rem;
+}
+
+.contact-card-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: .25rem;
+    min-width: 0;
+}
+
+.contact-card strong {
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.contact-card-copy > span {
+    color: #687582;
+    font-size: 1.05rem;
+    line-height: 1.45;
+    font-weight: 400;
+    overflow-wrap: anywhere;
+}
+
+.contact-email-card .contact-card-copy > span {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.contact-card-action {
+    margin-left: auto;
+    color: #97a2ad;
+    font-size: .85rem;
+}
+
+.contact-social {
+    max-width: 700px;
+    margin: 2rem auto 0;
+}
+
+.contact-social > p {
+    margin: 0 0 .85rem;
+    color: #687582;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.contact-social ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-social li {
+    min-width: 0;
+}
+
 .project-page {
     padding: 120px 0 90px;
 }
 
 .project-article {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.project-hero-image {
+.project-page .project-hero-image {
+    display: block;
     width: 60%;
+    max-width: 100%;
     height: auto;
     margin: 0 auto 3rem;
-    border: 1px solid rgba(44, 62, 80, .1);
-    border-radius: .75rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none;
+    background: transparent;
 }
 
-.project-description {
-    max-width: 960px;
+.project-header {
+    margin: 2.5rem auto 1.75rem;
+    color: inherit;
+    background: transparent;
+    text-align: center;
+}
+
+.project-header h1 {
+    margin: 0;
+    color: #{{ site.color.secondary }};
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1.15;
+    text-transform: none;
+}
+
+.project-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .75rem;
+    max-width: 70%;
+    margin: 0 auto 3.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(44, 62, 80, .1);
+    border-radius: 1rem;
+    background: #fff;
+    list-style: none;
+}
+
+.project-metadata li {
+    display: flex;
+    flex: 1 1 160px;
+    flex-direction: column;
+    gap: .2rem;
+    min-width: 0;
+    padding: .5rem 1rem;
+    text-align: center;
+}
+
+.project-metadata li + li {
+    border-left: 1px solid #e5e9ec;
+}
+
+.project-metadata-label {
+    color: #727e8a;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.project-metadata-value {
+    color: #{{ site.color.secondary }};
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.project-sections {
+    max-width: 900px;
     margin: 0 auto;
-    font-size: 1.05em;
-    line-height: 1.75;
+}
+
+.project-section {
+    margin: 0 0 2.75rem;
+    padding: 0;
+}
+
+.project-section h2,
+.project-taxonomy h2,
+.project-gallery h2 {
+    margin: 0 0 .6rem;
+    color: #{{ site.color.secondary }};
+    font-size: 1.8rem;
+    line-height: 1.3;
+    text-align: left;
+    text-transform: none;
+}
+
+
+
+.project-section-copy {
+    max-width: 950px;
+    color: #{{ site.color.secondary }};
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.6;
     text-align: justify;
 }
 
-.project-description h2,
-.project-description h3,
-.project-gallery h2 {
-    margin: 2em 0 .65em;
+.project-section-copy p {
+    margin: 0 0 1rem;
+    font-size: inherit;
 }
 
-.project-description p {
-    margin: 0 0 1.2em;
+.project-section-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.project-taxonomy {
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+    padding: 0;
 }
 
 .project-gallery {
-    margin-top: 3.5rem;
+    max-width: 1000px;
+    margin: 3.5rem auto 0;
     padding: 0;
 }
 
 .project-gallery h2 {
-    margin-top: 0;
-    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .project-gallery-grid {
@@ -332,9 +599,8 @@ section.success {
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: .85rem;
-    margin: 1.5rem 0 0;
+    gap: .65rem;
+    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -342,14 +608,14 @@ section.success {
 .project-tags > li {
     display: inline-flex;
     align-items: center;
-    gap: .65rem;
-    padding: 1rem 1.5rem;
-    border: 1px solid #{{ site.color.secondary }};
-    border-radius: 1.5rem;
+    padding: .7rem 1rem;
+    border: 1px solid rgba(44, 62, 80, .13);
+    border-radius: 999px;
     color: #{{ site.color.secondary }};
     background: #{{ site.color.secondary-light }};
-    font-size: 1em;
-    line-height: 1.3;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.25;
     list-style: none;
 }
 
@@ -385,12 +651,97 @@ section.success {
     }
 
     .project-page {
-        padding: 100px 0 60px;
+        padding: 90px 0 55px;
+    }
+
+    .project-page .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .project-page .project-hero-image {
+        border-radius: .75rem;
+    }
+
+    .project-header {
+        margin: 1.75rem auto 1.25rem;
+    }
+
+    .project-metadata {
+        gap: .25rem;
+        margin-bottom: 2.5rem;
+        padding: .65rem;
+    }
+
+    .project-metadata li {
+        flex-basis: 100%;
+        padding: .75rem .5rem;
+    }
+
+    .project-metadata li + li {
+        border-top: 1px solid #e9ecef;
+        border-left: 0;
+    }
+
+    .project-section {
+        margin-bottom: 2.25rem;
+    }
+
+    .project-section-copy {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .project-taxonomy {
+        margin-bottom: 2rem;
     }
 
     section.first {
         padding-top: 75px;
     }
+
+    .contact-page {
+        padding: 100px 0 40px;
+    }
+
+    .contact-page .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .contact-intro {
+        font-size: 1rem;
+    }
+
+    .contact-card {
+        gap: .65rem;
+        min-height: 88px;
+        padding: .85rem;
+    }
+
+    .contact-card-icon {
+        flex-basis: 48px;
+        width: 48px;
+        height: 48px;
+        font-size: 1.4rem;
+    }
+
+    .contact-card strong {
+        font-size: 1.2rem;
+    }
+
+    .contact-card-copy > span {
+        font-size: .95rem;
+    }
+
+    .contact-social ul {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-social {
+        margin-top: 1rem;
+    }
+
 }
 
 #portfolio .portfolio-item {
