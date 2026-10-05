@@ -4,9 +4,14 @@ title: OSINT Displacement Analytics
 permalink: /projects/osint/
 date: 2014-07-16
 img: osint.png
+
+meta-org: Web2Climate
+meta-date: 2025-2026
+meta-type: Commercial
+
 project-date: April 2014
 category: OSINT & Displacement Analytics
-description: The OSINT service is an asynchronous system for collecting and analyzing information from public platforms. It provides an API for triggering and monitoring collection tasks, while scheduled jobs handle recurring data collection from sources such as X, Reddit, and YouTube.
+description: The OSINT service is an asynchronous system for collecting and analyzing information from public platforms, developed for the THEIA project (EU). It provides an API for triggering and monitoring collection tasks, while scheduled jobs handle recurring data collection from sources such as X, Reddit, and YouTube.
 challenge: The main challenge is separating data collection, processing, scheduling, and delivery while allowing multiple tasks to run independently. The system also needs to handle potentially large amounts of data and provide controlled access to the underlying services.
 methodology: The service uses FastAPI for API access, Redis as a message broker, and Celery workers for asynchronous processing. Scheduled tasks are managed through RedBeat, while collected data is normalized into predefined schemas and analyzed through sentiment analysis, topic modelling, and frequency-based metrics. LLM-based alert generation and MQTT provide configurable notifications and downstream data delivery, with HashiCorp Vault handling secrets.
 tags:

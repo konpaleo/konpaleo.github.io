@@ -4,7 +4,7 @@
 <html>
 {% include head.html %}
 
-<body id="page-top">
+<body id="page-top" class="{% if page.layout == 'contact' %}contact-layout{% endif %}">
   {% include nav.html %}
 
   <main>

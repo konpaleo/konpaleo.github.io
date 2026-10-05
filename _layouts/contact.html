@@ -1,0 +1,45 @@
+---
+layout: page
+---
+
+<section id="contact" class="contact-page">
+  <div class="container">
+    <h1>Contact</h1>
+    <hr class="star-primary">
+    <p class="contact-intro">
+      Have a question on my work or an idea for a possible collaboration?
+    </p>
+
+    <a class="contact-card contact-email-card" href="mailto:{{ site.email | escape }}">
+      <span class="contact-card-icon" aria-hidden="true">
+        <i class="fa-solid fa-envelope"></i>
+      </span>
+      <span class="contact-card-copy">
+        <strong>Email me</strong>
+        <span>{{ site.email | escape }}</span>
+      </span>
+      <i class="fa-solid fa-arrow-right contact-card-action" aria-hidden="true"></i>
+    </a>
+
+    {% if site.social %}
+    <nav class="contact-social" aria-label="Connect with me on">
+      <p>Connect with me on</p>
+      <ul>
+        {% for network in site.social %}
+        <li>
+          <a class="contact-card" href="{{ network.url | escape }}" target="_blank" rel="noopener noreferrer">
+            <span class="contact-card-icon" aria-hidden="true">
+              <i class="fa-brands fa-{{ network.title | escape }}"></i>
+            </span>
+            <span class="contact-card-copy">
+              <strong>{{ network.title | capitalize | escape }}</strong>
+            </span>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-card-action" aria-hidden="true"></i>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+  </div>
+</section>
