@@ -4,18 +4,16 @@ title: Impact Data Extraction Framework
 permalink: /projects/impact-data/
 date: 2014-07-17
 img: impact-data.png
-gallery:
-  - image: /img/projects/impact-data-flowchart.png
-    caption: Tool architecture overview
-  - image: /img/projects/georeferencing.png
-    caption: Geolocation disambiguation flowchart
-  - image: /img/projects/model-evaluation-flowchart.png
-    caption: LLM evaluation framework flowchart
-project-date: April 2014
+
+meta-org: Web2Climate
+meta-date: 2024-2026
+meta-type: Commercial
+
 category: Disaster Impact Data
-description: A tool to collect disaster impact data from public sources. Data is scraped and fed into an LLM in order to extract tabular data from the text. The web contains vast amounts of information about natural disasters, from news reports to scientific publications. However, these sources often provide inconsistent or conflicting information. Using AI and web-scraping technologies, we collect and analyze data from multiple sources, extract key information, and consolidate it into a consistent, structured database of natural disasters.
-challenge: Disaster information is spread across public sources and may be inconsistent or conflicting, making it difficult to consolidate into a reliable, structured dataset.
-methodology: The framework scrapes source material, uses an LLM to extract structured information, and applies georeferencing and model evaluation to assess and consolidate the results.
+description: Impact Data Intelligence is a framework for transforming unstructured information about natural-hazard events into structured, reusable datasets. It collects information from sources such as news websites, Wikipedia, and scientific publications, and extracts both quantitative and qualitative impacts using LLMs.
+challenge: Impact information is scattered across sources and usually appears as narrative text. The system needs to handle differences in terminology, dates, locations, languages, and levels of detail while identifying duplicate reports of the same event. It also needs to remain independent of any single LLM provider.
+methodology: The pipeline handles HTML and PDF ingestion, text preprocessing, location extraction, translation, summarization, and structured extraction through LLM function calling. Extracted events are validated, standardized, deduplicated, aggregated, and georeferenced using Nominatim. PostgreSQL, SQLAlchemy, and PostGIS provide storage, while Redis and Celery support asynchronous processing. A manually labelled dataset provides a basis for evaluating and comparing LLM performance..
+
 tags:
     - LLM
     - Web Scraping
@@ -23,6 +21,18 @@ tags:
     - Prompt Engineering
     - Georeferencing
     - Model Evaluation
-technologies: []
-
+technologies:
+    - FastAPI
+    - Pandas
+    - Celery
+    - Redis
+    - PostgreSQL
+    - Nominatim
+gallery:
+  - image: /img/projects/impact-data-flowchart.png
+    caption: Tool architecture overview
+  - image: /img/projects/georeferencing.png
+    caption: Geolocation disambiguation flowchart
+  - image: /img/projects/model-evaluation-flowchart.png
+    caption: LLM evaluation framework flowchart
 ---

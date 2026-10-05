@@ -9,28 +9,25 @@ layout: page
       <img src="{{ '/img/projects/' | append: page.img | relative_url }}?v=1" class="img-centered project-hero-image" alt="{{ page.alt | default: page.title }}">
       {% endif %}
 
-      <header class="project-header">
-        <h1>{{ page.title | escape }}</h1>
-      </header>
 
-      {% if page.project-date or page.client or page.category %}
+      {% if page.meta-date or page.meta-org or page.meta- %}
       <ul class="project-metadata" aria-label="Project details">
-        {% if page.project-date %}
+        {% if page.meta-org %}
         <li>
-          <span class="project-metadata-label">Date</span>
-          <span class="project-metadata-value">{{ page.project-date | escape }}</span>
+          <span class="project-metadata-label">Organization</span>
+          <span class="project-metadata-value">{{ page.meta-org | escape }}</span>
         </li>
         {% endif %}
-        {% if page.client %}
+        {% if page.meta-date %}
         <li>
-          <span class="project-metadata-label">Client</span>
-          <span class="project-metadata-value">{{ page.client | escape }}</span>
+          <span class="project-metadata-label">Period</span>
+          <span class="project-metadata-value">{{ page.meta-date | escape }}</span>
         </li>
         {% endif %}
-        {% if page.category %}
+        {% if page.meta-type %}
         <li>
           <span class="project-metadata-label">Category</span>
-          <span class="project-metadata-value">{{ page.category | escape }}</span>
+          <span class="project-metadata-value">{{ page.meta-type | escape }}</span>
         </li>
         {% endif %}
       </ul>
