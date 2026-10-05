@@ -246,10 +246,12 @@ section.success {
 
 .contact-card {
     display: flex;
+    box-sizing: border-box;
+    width: 100%;
     align-items: center;
-    gap: 1rem;
-    min-height: 118px;
-    padding: 1.25rem;
+    gap: .85rem;
+    min-height: 96px;
+    padding: 1rem 1.15rem;
     border: 1px solid rgba(44, 62, 80, .1);
     border-radius: 1rem;
     color: #{{ site.color.secondary }};
@@ -291,14 +293,14 @@ section.success {
 }
 
 .contact-email-card {
-    max-width: 40%;
+    max-width: 480px;
     margin: 0 auto;
 }
 
 .contact-card-icon {
     display: grid;
     flex: 0 0 56px;
-    width: 30%;
+    width: 56px;
     height: 56px;
     place-items: center;
     border-radius: .9rem;
@@ -316,14 +318,22 @@ section.success {
 }
 
 .contact-card strong {
-    font-size: 1rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1.2;
 }
 
 .contact-card-copy > span {
     color: #687582;
-    font-size: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.45;
     font-weight: 400;
     overflow-wrap: anywhere;
+}
+
+.contact-email-card .contact-card-copy > span {
+    overflow-wrap: normal;
+    word-break: normal;
 }
 
 .contact-card-action {
@@ -340,9 +350,10 @@ section.success {
 .contact-social > p {
     margin: 0 0 .85rem;
     color: #687582;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: .08em;
+    line-height: 1.4;
     text-align: center;
 }
 
@@ -597,7 +608,7 @@ section.success {
 .project-tags > li {
     display: inline-flex;
     align-items: center;
-    padding: .55rem .9rem;
+    padding: .7rem 1rem;
     border: 1px solid rgba(44, 62, 80, .13);
     border-radius: 999px;
     color: #{{ site.color.secondary }};
@@ -703,8 +714,24 @@ section.success {
     }
 
     .contact-card {
-        gap: .75rem;
-        padding: 1rem;
+        gap: .65rem;
+        min-height: 88px;
+        padding: .85rem;
+    }
+
+    .contact-card-icon {
+        flex-basis: 48px;
+        width: 48px;
+        height: 48px;
+        font-size: 1.4rem;
+    }
+
+    .contact-card strong {
+        font-size: 1.2rem;
+    }
+
+    .contact-card-copy > span {
+        font-size: .95rem;
     }
 
     .contact-social ul {
