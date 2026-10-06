@@ -29,10 +29,14 @@ technologies:
     - PostgreSQL
     - Nominatim
 gallery:
+  - image: /img/projects/impact-data-snapshot.png
+    caption: Data snapshot
   - image: /img/projects/impact-data-flowchart.png
     caption: Tool architecture overview
-  - image: /img/projects/georeferencing.png
-    caption: Geolocation disambiguation flowchart
   - image: /img/projects/model-evaluation-flowchart.png
     caption: LLM evaluation framework flowchart
+  - image: /img/projects/georeferencing.png
+    caption: Geolocation disambiguation flowchart
+  - image: /img/projects/impact-data-website.png
+    caption: Visualization interface
 ---

@@ -25,7 +25,7 @@ technologies:
   - Jina
 gallery:
   - image: /img/projects/shot1.png
-    caption: OceanWise screenshot 1
+    caption: Conversation snapshot I
   - image: /img/projects/shot2.png
-    caption: OceanWise screenshot 2
+    caption: Conversation snapshot II
 ---

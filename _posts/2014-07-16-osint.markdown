@@ -25,4 +25,11 @@ technologies:
     - Celery
     - Redis
     - Vault
+gallery:
+  - image: /img/projects/osint-architecture.png
+    caption: Module architecture
+  - image: /img/projects/osint-tweet-activity.png
+    caption: Analysis of tweet activity
+  - image: /img/projects/osint-lda.png
+    caption: Topic modeling with LDA
 ---

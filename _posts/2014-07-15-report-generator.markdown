@@ -3,7 +3,12 @@ layout: post
 title: Online Reputation Report Generator
 permalink: /projects/report-generator/
 date: 2014-07-15
-img: orm.png
+img: orm-cover.png
+
+meta-org: Web2Climate
+meta-date: 2025-2026
+meta-type: Commercial
+
 project-date: April 2014
 category: Online Reputation Management
 description: This project is an API-driven service that turns online reputation monitoring data into structured reports. It supports multiple brands and sources, with metrics covering sentiment, trends, comparisons, and source-level breakdowns.
@@ -17,5 +22,13 @@ technologies:
     - FastAPI
     - Jinja
     - WeasyPrint
-
+gallery:
+  - image: /img/projects/orm-source-analysis.png
+    caption: Source analysis
+  - image: /img/projects/orm-sentiment-analysis.png
+    caption: Sentiment analysis
+  - image: /img/projects/orm-executive-report.png
+    caption: Executive report
+  - image: /img/projects/orm-daily-analysis.png
+    caption: Brand daily analysis
 ---
