@@ -90,6 +90,14 @@ header img {
     margin: 0 auto 20px;
 }
 
+header .profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
@@ -100,11 +108,13 @@ header .intro-text .name {
 
 header .intro-text .skills {
     font-size: 1.3em;
-    font-weight: 500;
+    font-weight: 300;
+    margin: 1em auto 0;
+
 }
 
 header .intro-text .description {
-    max-width: 80%;
+    max-width: 95%;
     margin: 1.5em auto 0;
     font-size: 1.2em;
     font-weight: 300;
@@ -123,15 +133,15 @@ header .intro-text + .list-inline {
     }
 
     header .intro-text .name {
-        font-size: 3.5em;
+        font-size: 3em;
     }
 
     header .intro-text .skills {
-        font-size: 1.75em;
+        font-size: 1.7em;
     }
 
     header .intro-text .description {
-    font-size: 1.3em;
+        font-size: 1.3em;
     }
 }
 
@@ -189,7 +199,7 @@ section {
 
 section h2 {
     margin: 0;
-    font-size: 3em;
+    font-size: 2.8em;
 }
 
 section.success {
@@ -227,20 +237,14 @@ section.success {
     text-align: center;
 }
 
-.contact-page h1 {
-    margin: 0;
-    color: #{{ site.color.secondary }};
-    font-size: clamp(2rem, 5vw, 3.25rem);
-    line-height: 1.15;
-}
-
 .contact-intro {
     max-width: 680px;
     margin: 1.25rem auto 2rem;
-    color: #{{ site.color.secondary }};
-    font-size: 1.6rem;
+    color: #687582;
+    font-size: 2rem;
     font-weight: 300;
     line-height: 1.6;
+    letter-spacing: .01em;
     text-align: center;
 }
 
@@ -325,9 +329,9 @@ section.success {
 
 .contact-card-copy > span {
     color: #687582;
-    font-size: 1.05rem;
-    line-height: 1.45;
+    font-size: 1.4rem;
     font-weight: 400;
+    line-height: 1.45;
     overflow-wrap: anywhere;
 }
 
@@ -350,9 +354,9 @@ section.success {
 .contact-social > p {
     margin: 0 0 .85rem;
     color: #687582;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: .08em;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: .01em;
     line-height: 1.4;
     text-align: center;
 }
@@ -420,6 +424,8 @@ section.success {
     border-radius: 1rem;
     background: #fff;
     list-style: none;
+    box-shadow: 0 6px 20px rgba(35, 49, 64, .06);
+
 }
 
 .project-metadata li {
@@ -611,10 +617,10 @@ section.success {
     padding: .7rem 1rem;
     border: 1px solid rgba(44, 62, 80, .13);
     border-radius: 999px;
-    color: #{{ site.color.secondary }};
+    color: #545f69;
     background: #{{ site.color.secondary-light }};
-    font-size: 1.4rem;
-    font-weight: 300;
+    font-size: 1.35rem;
+    font-weight: 400;
     line-height: 1.25;
     list-style: none;
 }
@@ -648,6 +654,43 @@ section.success {
 @media(max-width:767px) {
     section {
         padding: 75px 0;
+    }
+
+    header .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    section h2 {
+        margin: 0;
+        font-size: 1.7em;
+    }
+
+    hr.star-primary {
+        max-width: 150px;
+    }
+
+    header .intro-text .name {
+        font-size: 1.8em;
+    }
+
+    header .intro-text .skills {
+        font-size: 1.2em;
+    }
+
+    header .intro-text .description {
+        max-width: 90%;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        font-size: 1.7rem;
     }
 
     .project-page {
@@ -688,7 +731,7 @@ section.success {
     }
 
     .project-section-copy {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.7;
     }
 
@@ -710,7 +753,7 @@ section.success {
     }
 
     .contact-intro {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .contact-card {
@@ -723,15 +766,15 @@ section.success {
         flex-basis: 48px;
         width: 48px;
         height: 48px;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .contact-card strong {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .contact-card-copy > span {
-        font-size: .95rem;
+        font-size: 1.3rem;
     }
 
     .contact-social ul {
@@ -740,6 +783,10 @@ section.success {
 
     .contact-social {
         margin-top: 1rem;
+    }
+
+    .contact-social > p {
+        font-size: 1.5rem;
     }
 
 }
