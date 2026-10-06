@@ -28,4 +28,6 @@ gallery:
     caption: Conversation snapshot I
   - image: /img/projects/shot2.png
     caption: Conversation snapshot II
+  - image: /img/projects/oceanwise-dsp-integration.png
+    caption: OCEANIDS Decision Support Platform integration
 ---
